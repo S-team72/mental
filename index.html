@@ -1,3 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skourtis Care – Psychiatric Services</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background-color: #f4f4f4; color: #333; }
+    header, footer { background-color: #0d47a1; color: white; text-align: center; padding: 20px 10px; }
+    .container { max-width: 900px; margin: auto; padding: 20px; }
+    .lang-toggle { text-align: right; margin-bottom: 10px; }
+    .lang-toggle button { margin-left: 10px; padding: 5px 10px; }
+    .section { margin-bottom: 30px; }
+    .button { display: inline-block; padding: 12px 20px; background-color: #1976d2; color: white; text-decoration: none; border-radius: 6px; }
+    .qr-img { max-width: 200px; margin-top: 10px; }
+  </style>
+  <script>
+    function setLanguage(lang) {
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.style.display = el.getAttribute('data-lang') === lang ? 'block' : 'none';
+      });
+    }
+    window.onload = () => setLanguage('en');
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Skourtis Care</h1>
+    <p>Online Psychiatric Services</p>
+  </header>
+
+  <div class="container">
+    <div class="lang-toggle">
+      <label>Language:</label>
+      <button onclick="setLanguage('en')">English</button>
+      <button onclick="setLanguage('gr')">Ελληνικά</button>
+    </div>
+
+    <div class="section" data-lang="en">
+      <h2>About</h2>
+      <p>Psychiatric evaluation and follow-up consultations, conducted remotely via video call.</p>
+    </div>
+    <div class="section" data-lang="gr">
+      <h2>Σχετικά</h2>
+      <p>Ψυχιατρική εκτίμηση και παρακολούθηση εξ αποστάσεως μέσω βιντεοκλήσης.</p>
+    </div>
+
+    <div class="section" data-lang="en">
+      <h2>Book an Appointment</h2>
+      <a href="https://calendar.app.google/7NvFJwrBfSXYqt1v6" target="_blank" class="button">Book Now</a>
+    </div>
+    <div class="section" data-lang="gr">
+      <h2>Κλείσε Ραντεβού</h2>
+      <a href="https://calendar.app.google/7NvFJwrBfSXYqt1v6" target="_blank" class="button">Κλείσε Τώρα</a>
+    </div>
+
+    <div class="section" data-lang="en">
+      <h2>Payments</h2>
+      <p>Fee: <strong>120€ per session</strong></p>
+      <p>You can pay via bank transfer or Stripe:</p>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://buy.stripe.com/28EcN490t8YJ1tA1876oo00&size=200x200" alt="Stripe QR" class="qr-img" />
+      <p><a href="https://buy.stripe.com/28EcN490t8YJ1tA1876oo00" target="_blank" class="button">Pay with Stripe</a></p>
+      <p><em>Please complete your payment before the scheduled consultation.</em></p>
+    </div>
+
+    <div class="section" data-lang="gr">
+      <h2>Πληρωμές</h2>
+      <p>Κόστος: <strong>120€ ανά συνεδρία</strong></p>
+      <p>Μπορείτε να πληρώσετε με κατάθεση ή μέσω Stripe:</p>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://buy.stripe.com/28EcN490t8YJ1tA1876oo00&size=200x200" alt="Stripe QR" class="qr-img" />
+      <p><a href="https://buy.stripe.com/28EcN490t8YJ1tA1876oo00" target="_blank" class="button">Πληρωμή με Stripe</a></p>
+      <p><em>Παρακαλώ ολοκληρώστε την πληρωμή πριν από τη συνεδρία.</em></p>
+    </div>
+
+    <div class="section" data-lang="en">
+      <h2>Blog</h2>
+      <p><strong>Understanding Online Therapy</strong></p>
+      <p>Online psychiatric consultations provide flexible and accessible care for those in need of mental health support. Whether you're dealing with anxiety, depression, or life transitions, remote therapy can be just as effective as in-person sessions.</p>
+    </div>
+
+    <div class="section" data-lang="gr">
+      <h2>Ιστολόγιο</h2>
+      <p><strong>Κατανόηση της Ψυχοθεραπείας Εξ Αποστάσεως</strong></p>
+      <p>Οι ψυχιατρικές συνεδρίες εξ αποστάσεως παρέχουν ευελιξία και προσβασιμότητα σε όσους χρειάζονται ψυχική υποστήριξη. Είτε αντιμετωπίζετε άγχος, κατάθλιψη ή μεταβατικά στάδια στη ζωή σας, η διαδικτυακή θεραπεία μπορεί να είναι εξίσου αποτελεσματική με τις δια ζώσης συνεδρίες.</p>
+    </div>
+
+    <div class="section" data-lang="en">
+      <h2>Contact</h2>
+      <p>Email: skourtis_med@yahoo.gr</p>
+      <p><a href="https://www.linkedin.com/in/theofanis-skourtis-6b543441/" target="_blank">LinkedIn Profile</a></p>
+    </div>
+    <div class="section" data-lang="gr">
+      <h2>Επικοινωνία</h2>
+      <p>Email: skourtis_med@yahoo.gr</p>
+      <p><a href="https://www.linkedin.com/in/theofanis-skourtis-6b543441/" target="_blank">Προφίλ στο LinkedIn</a></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Skourtis Care – All rights reserved.</p>
+  </footer>
+</body>
+</html>
 <!DOCTYPE html>
 <html lang="en">
 <!DOCTYPE html>
